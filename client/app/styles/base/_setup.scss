@@ -1,0 +1,28 @@
+@use '../settings/colors';
+@use '../settings/spacing';
+@use '../settings/font-weights' as fw;
+@use '../settings/font-sizes' as fz;
+
+$base-font-family: 'Cera Pro';
+$base-font-heading: 'Cera Pro';
+
+$heading-color: var(--text-color-base) !default;
+$heading-font-weight: fw.$bold !default;
+$heading-line-height: fz.$lh-m !default;
+
+$base-text-color: var(--text-color-base) !default;
+$text-color-light: var(--text-color-light) !default;
+$text-color-medium: var(--text-color-medium) !default;
+
+$base-background-color: var(--bg-page) !default;
+$base-link-color: var(--accent-color) !default;
+
+$base-link-hover-color: rgba(var(--accent-color), 0.5) !default;
+
+$font-size-base: fz.$size-s !default;
+$line-height-base: fz.$lh-m !default;
+
+$container-width: 1200px;
+$padding-container: 0 spacing.$m;
+
+$animation-speed: 0.3s;

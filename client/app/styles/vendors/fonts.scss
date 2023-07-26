@@ -1,0 +1,7 @@
+@use '../tools/mixin.scss';
+
+@include mixin.font-face('Cera Pro', 'CeraPro-Light', 300, 'normal');
+@include mixin.font-face('Cera Pro', 'CeraPro-Regular', 400, 'normal');
+@include mixin.font-face('Cera Pro', 'CeraPro-Medium', 500, 'normal');
+@include mixin.font-face('Cera Pro', 'CeraPro-Bold', 700, 'normal');
+@include mixin.font-face('Cera Pro', 'CeraPro-Black', 900, 'normal');

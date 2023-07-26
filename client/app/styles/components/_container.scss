@@ -1,0 +1,7 @@
+@use '../base/setup';
+
+.container {
+  max-width: setup.$container-width;
+  width: 100%;
+  padding: setup.$padding-container;
+}
