@@ -52,7 +52,7 @@
       padding-top: spacing.$xs;
       padding-left: setup.$padding-container;
       padding-right: setup.$padding-container;
-      background-color: colors.$white;
+      background-color: setup.$base-background-color;
       transform: translate(100%);
       @include mixin.animate(transform);
     }

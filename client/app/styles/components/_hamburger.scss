@@ -1,4 +1,5 @@
 @use '../settings/colors';
+@use '../base/setup';
 
 .hamburger {
   width: 30px;
@@ -13,7 +14,7 @@
     position: absolute;
     height: 3px;
     width: 100%;
-    background: colors.$black;
+    background: setup.$base-text-color;
     border-radius: 6px;
     opacity: 1;
     left: 0;
