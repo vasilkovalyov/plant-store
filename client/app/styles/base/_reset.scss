@@ -31,6 +31,10 @@ section {
   display: block;
 }
 
+address {
+  font-style: normal;
+}
+
 html,
 body {
   color: setup.$base-text-color;
@@ -51,7 +55,9 @@ body {
   }
   :root {
     --bg-page: #{colors.$black};
+    --bg-light: #{rgba(0, 0, 0, 0.2)};
     --text-color-base: #{colors.$white};
+    --text-color-medium: #{colors.$white};
   }
 }
 
@@ -61,6 +67,12 @@ body {
   width: 100%;
   overflow: hidden;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  > main {
+    flex: 1;
+  }
 }
 
 // adaptive images

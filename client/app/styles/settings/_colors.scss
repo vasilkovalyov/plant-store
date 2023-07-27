@@ -1,5 +1,6 @@
 $white: #ffffff;
 $black: #3d3d3d;
+$beige: #fbfbfb;
 
 $green: #46a358;
 
@@ -12,6 +13,7 @@ $primary-color: $green;
 
 :root {
   --bg-page: #{$white};
+  --bg-light: #{$beige};
   --text-color-base: #{$black};
   --text-color-light: #{$grey-light};
   --text-color-medium: #{$grey-medium};

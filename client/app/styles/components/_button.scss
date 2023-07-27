@@ -30,7 +30,7 @@
     color: colors.$white;
 
     &.button--contained {
-      background-color: var(--accent-color);
+      background-color: setup.$accent-color;
 
       &:hover {
         opacity: 0.7;
@@ -38,12 +38,12 @@
     }
 
     &.button--outline {
-      color: var(--accent-color);
-      border: 2px solid var(--accent-color);
+      color: setup.$accent-color;
+      border: 2px solid setup.$accent-color;
 
       &:hover {
         color: colors.$white;
-        background-color: var(--accent-color);
+        background-color: setup.$accent-color;
       }
     }
   }

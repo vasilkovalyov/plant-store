@@ -1,0 +1,63 @@
+@use '../base/setup';
+@use '../tools/responsive';
+
+.services-banner {
+  background-color: setup.$light-background-color;
+  padding-top: 24px;
+
+  & &__container {
+    @media (min-width: responsive.$tablet_large) {
+      display: flex;
+    }
+  }
+
+  & &__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+
+    @media (min-width: responsive.$mobile_md) {
+      margin-right: 14px;
+    }
+
+    @media (min-width: responsive.$tablet_large) {
+      width: 70%;
+      margin-bottom: 0;
+    }
+  }
+
+  & &__grid {
+    @media (min-width: responsive.$mobile_md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: -(setup.$column-gap);
+      margin-right: -(setup.$column-gap);
+    }
+  }
+
+  & &__col {
+    @media (min-width: responsive.$mobile_md) {
+      width: 48%;
+      padding-left: setup.$column-gap;
+      padding-right: setup.$column-gap;
+    }
+
+    @media (min-width: responsive.$tablet) {
+      width: 32%;
+    }
+
+    &:not(:last-child) {
+      @media (min-width: responsive.$mobile_md) {
+        border-right: 1px solid rgba(70, 163, 88, 0.1);
+        margin-right: 10px;
+      }
+    }
+  }
+
+  & &__aside {
+    @media (min-width: responsive.$tablet_large) {
+      width: 30%;
+    }
+  }
+}

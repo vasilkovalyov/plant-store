@@ -1,0 +1,56 @@
+@use '../base/setup';
+@use '../settings/spacing';
+@use '../settings/colors';
+@use '../settings/font-sizes' as fz;
+@use '../settings/font-weights' as fw;
+
+.cta-form {
+  & &__title {
+    margin-bottom: 14px;
+    font-size: calc(fz.$h6-medium + 1px);
+  }
+
+  & &__text {
+    color: setup.$text-color-medium;
+    font-size: calc(fz.$size-xxs - 1px);
+    font-style: normal;
+    line-height: fz.$lh-xl;
+  }
+}
+
+.cta-field {
+  position: relative;
+  border-radius: 6px;
+  background: setup.$base-background-color;
+  box-shadow: 0px 0px 20px 0px rgba(colors.$black, 0.06);
+  margin-bottom: 20px;
+  overflow: hidden;
+
+  & &__input {
+    padding: spacing.$xs 90px spacing.$xs spacing.$xs;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: setup.$text-color-light;
+    font-family: setup.$base-font-family;
+    font-size: fz.$size-xxs;
+    font-style: normal;
+
+    &::placeholder {
+      color: setup.$text-color-light;
+    }
+  }
+
+  & &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: fz.$size-m;
+    font-weight: fw.$bold;
+    padding-right: spacing.$m;
+    padding-left: spacing.$m;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

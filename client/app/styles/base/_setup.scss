@@ -16,15 +16,19 @@ $text-color-light: var(--text-color-light) !default;
 $text-color-medium: var(--text-color-medium) !default;
 
 $base-background-color: var(--bg-page) !default;
+$light-background-color: var(--bg-light) !default;
 $base-link-color: var(--accent-color) !default;
 
 $base-link-hover-color: rgba(var(--accent-color), 0.5) !default;
+
+$accent-color: var(--accent-color) !default;
 
 $font-size-base: fz.$size-s !default;
 $line-height-base: fz.$lh-m !default;
 
 $container-width: 1200px;
 $padding-container: spacing.$m;
+$column-gap: calc(spacing.$s - 2px);
 
 $animation-speed: 0.3s;
 

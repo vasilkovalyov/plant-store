@@ -16,7 +16,7 @@
       max-width: 120px;
     }
 
-    @media (max-width: responsive.$tablet) {
+    @media (max-width: responsive.$tablet_max) {
       max-width: 100px;
     }
   }
@@ -39,7 +39,7 @@
       left: setup.$padding-container;
       right: setup.$padding-container;
       height: 1px;
-      background-color: var(--accent-color);
+      background-color: setup.$accent-color;
       opacity: 0.5;
     }
   }
@@ -57,7 +57,7 @@
       @include mixin.animate(transform);
     }
 
-    @media (max-width: responsive.$tablet) {
+    @media (max-width: responsive.$tablet_max) {
       top: 46px;
     }
   }

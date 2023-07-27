@@ -1,0 +1,23 @@
+@use '../base/setup';
+@use '../settings/font-sizes' as fz;
+
+.service {
+  margin-bottom: 24px;
+
+  & &__image {
+    max-width: 80px;
+    width: 100%;
+    margin-bottom: 10px;
+    min-height: 100px;
+  }
+
+  & &__title {
+    margin-bottom: 10px;
+  }
+
+  & &__text {
+    color: setup.$text-color-medium;
+    font-size: fz.$size-xxs;
+    line-height: fz.$lh-xl;
+  }
+}
