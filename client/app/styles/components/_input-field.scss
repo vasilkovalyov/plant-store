@@ -1,0 +1,38 @@
+@use '../base/setup';
+@use '../settings/spacing';
+@use '../settings/font-sizes' as fz;
+
+.input-field {
+  margin-bottom: 16px;
+
+  & &__label {
+    display: block;
+  }
+
+  & &__label-text {
+    display: block;
+    margin-bottom: 10px;
+    color: setup.$base-text-color;
+    font-size: fz.$size-xs;
+  }
+
+  & &__input {
+    border-radius: 5px;
+    border: 1px solid setup.$text-color-medium;
+    outline: none;
+    height: 40px;
+    padding: spacing.$xs calc(spacing.$xs + 2px);
+    width: 100%;
+    color: setup.$text-color-light;
+    font-family: setup.$base-font-family;
+    font-size: fz.$size-xxs;
+
+    &::placeholder {
+      color: setup.$text-color-light;
+    }
+
+    &:focus {
+      border: 1px solid setup.$accent-color;
+    }
+  }
+}

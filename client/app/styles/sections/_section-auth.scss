@@ -1,0 +1,6 @@
+@use '../settings/spacing';
+
+.section-auth {
+  padding-top: spacing.$xxl;
+  padding-bottom: spacing.$xxl;
+}

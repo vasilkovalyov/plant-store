@@ -1,0 +1,49 @@
+@use '../base/setup';
+@use '../settings/font-sizes' as fz;
+@use '../settings/font-weights' as fw;
+@use '../settings/spacing';
+
+.auth-form {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+
+  & &__toggle-box {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  & &__toggle-form-button {
+    font-size: fz.$size-l;
+    font-weight: fw.$medium;
+
+    &.active {
+      color: setup.$accent-color;
+    }
+
+    &:nth-child(1) {
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: 0;
+        right: 0;
+        width: 1px;
+        height: 10px;
+        background-color: setup.$base-text-color;
+      }
+    }
+  }
+}
+
+.login-form {
+  &__message {
+    font-size: calc(fz.$size-xxs - 1px);
+    margin-bottom: 20px;
+  }
+
+  .button {
+    height: 40px;
+  }
+}

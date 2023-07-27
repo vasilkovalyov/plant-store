@@ -8,6 +8,8 @@
 .button {
   position: relative;
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   background-color: transparent;
   border-radius: 6px;
@@ -16,6 +18,10 @@
   font-family: setup.$base-font-family;
   cursor: pointer;
   @include mixin.animate(background-color color opacity);
+
+  &.button--fullwidth {
+    width: 100%;
+  }
 
   &.button--text {
     padding: spacing.$xxxs spacing.$xs;

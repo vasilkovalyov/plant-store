@@ -78,6 +78,7 @@ export default function Header() {
             variant="contained"
             className="button-login"
             aria-label="desktop-button-login"
+            href="/auth"
           >
             <Icon icon={IconEnum.Logout} />
             Login

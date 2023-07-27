@@ -8,6 +8,7 @@ export default function Button({
   variant = 'text',
   children,
   className,
+  fullwidth,
   onClick,
   ...props
 }: IButtonProps) {
@@ -25,7 +26,13 @@ export default function Button({
   if (href) {
     return (
       <Link
-        className={cn('button', colorClassname, variantClassname, className)}
+        className={cn(
+          'button',
+          colorClassname,
+          variantClassname,
+          { 'button--fullwidth': fullwidth },
+          className
+        )}
         href={href}
         onClick={onClick}
         {...props}
@@ -36,7 +43,13 @@ export default function Button({
   }
   return (
     <button
-      className={cn('button', colorClassname, variantClassname, className)}
+      className={cn(
+        'button',
+        colorClassname,
+        variantClassname,
+        { 'button--fullwidth': fullwidth },
+        className
+      )}
       onClick={onClick}
       {...props}
     >
