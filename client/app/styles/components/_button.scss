@@ -1,0 +1,50 @@
+@use '../base/setup';
+@use '../settings/spacing';
+@use '../settings/colors';
+@use '../settings/font-sizes' as fz;
+@use '../settings/font-weights' as fw;
+@use '../tools/mixin';
+
+.button {
+  position: relative;
+  display: inline-flex;
+  border: none;
+  background-color: transparent;
+  border-radius: 6px;
+  padding: spacing.$xxs spacing.$s;
+  font-size: fz.$size-s;
+  font-family: setup.$base-font-family;
+  cursor: pointer;
+  @include mixin.animate(background-color color opacity);
+
+  &.button--text {
+    padding: spacing.$xxxs spacing.$xs;
+  }
+
+  &.button--medium {
+    padding: spacing.$xs spacing.$l;
+    font-weight: fw.$bold;
+  }
+
+  &.button--primary {
+    color: colors.$white;
+
+    &.button--contained {
+      background-color: var(--accent-color);
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &.button--outline {
+      color: var(--accent-color);
+      border: 2px solid var(--accent-color);
+
+      &:hover {
+        color: colors.$white;
+        background-color: var(--accent-color);
+      }
+    }
+  }
+}

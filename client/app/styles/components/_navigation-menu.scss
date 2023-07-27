@@ -1,0 +1,75 @@
+@use '../base/setup';
+@use '../settings/font-weights' as fw;
+@use '../settings/font-sizes' as fz;
+@use '../settings/colors';
+@use '../settings/spacing';
+@use '../tools/mixin';
+
+.navigation-menu {
+  @include mixin.listreset();
+
+  @media (max-width: setup.$header-nav-breakpoint-max) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: setup.$header-nav-breakpoint-min) {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+
+    @media (min-width: setup.$header-nav-breakpoint-min) {
+      margin-left: 25px;
+      margin-right: 25px;
+      padding-top: spacing.$l;
+      padding-bottom: spacing.$l;
+    }
+  }
+
+  &__item-link {
+    display: inline-block;
+    color: colors.$black;
+    font-size: fz.$size-s;
+
+    @media (max-width: setup.$header-nav-breakpoint-max) {
+      padding: spacing.$xs 0;
+      display: block;
+    }
+
+    @media (min-width: setup.$header-nav-breakpoint-min) {
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background-color: var(--accent-color);
+        opacity: 0;
+        @include mixin.animate(opacity);
+      }
+    }
+
+    &:hover {
+      color: var(--accent-color);
+
+      @media (min-width: setup.$header-nav-breakpoint-min) {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.active {
+      font-weight: fw.$bold;
+
+      @media (min-width: setup.$header-nav-breakpoint-min) {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

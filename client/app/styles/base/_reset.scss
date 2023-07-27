@@ -55,6 +55,14 @@ body {
   }
 }
 
+#wrapper {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
 // adaptive images
 img {
   max-width: 100%;

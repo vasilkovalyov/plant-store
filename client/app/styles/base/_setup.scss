@@ -2,6 +2,7 @@
 @use '../settings/spacing';
 @use '../settings/font-weights' as fw;
 @use '../settings/font-sizes' as fz;
+@use '../tools/responsive';
 
 $base-font-family: 'Cera Pro';
 $base-font-heading: 'Cera Pro';
@@ -23,6 +24,9 @@ $font-size-base: fz.$size-s !default;
 $line-height-base: fz.$lh-m !default;
 
 $container-width: 1200px;
-$padding-container: 0 spacing.$m;
+$padding-container: spacing.$m;
 
 $animation-speed: 0.3s;
+
+$header-nav-breakpoint-min: responsive.$tablet_large;
+$header-nav-breakpoint-max: responsive.$tablet_large - 1px;

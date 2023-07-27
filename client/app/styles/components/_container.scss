@@ -3,5 +3,7 @@
 .container {
   max-width: setup.$container-width;
   width: 100%;
-  padding: setup.$padding-container;
+  padding-left: setup.$padding-container;
+  padding-right: setup.$padding-container;
+  margin: 0 auto;
 }

@@ -1,6 +1,100 @@
+@use '../base/setup';
 @use '../settings/spacing';
+@use '../settings/colors';
+@use '../tools/mixin';
+@use '../tools/responsive';
 
 .header {
-  padding-top: spacing.$m;
-  padding-bottom: spacing.$m;
+  &.nav-active .header__navigation {
+    @media (max-width: setup.$header-nav-breakpoint-max) {
+      transform: translate(0);
+    }
+  }
+
+  & &__logo {
+    @media (max-width: setup.$header-nav-breakpoint-max) {
+      max-width: 120px;
+    }
+
+    @media (max-width: responsive.$tablet) {
+      max-width: 100px;
+    }
+  }
+
+  & &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: setup.$header-nav-breakpoint-max) {
+      padding-top: calc(spacing.$xxs + 2px);
+      padding-bottom: spacing.$xs;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: setup.$padding-container;
+      right: setup.$padding-container;
+      height: 1px;
+      background-color: var(--accent-color);
+      opacity: 0.5;
+    }
+  }
+
+  & &__navigation {
+    @media (max-width: setup.$header-nav-breakpoint-max) {
+      @include mixin.absoluteCover();
+      top: 56px;
+      height: 100vh;
+      padding-top: spacing.$xs;
+      padding-left: setup.$padding-container;
+      padding-right: setup.$padding-container;
+      background-color: colors.$white;
+      transform: translate(100%);
+      @include mixin.animate(transform);
+    }
+
+    @media (max-width: responsive.$tablet) {
+      top: 46px;
+    }
+  }
+
+  & &__auth-info {
+    .button {
+      &:not(.button-login) {
+        padding: 0;
+      }
+
+      &:not(:first-child) {
+        margin-left: 16px;
+      }
+    }
+
+    .button-login {
+      svg {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  & &__toggler-menu {
+    @media (min-width: setup.$header-nav-breakpoint-min) {
+      display: none;
+    }
+  }
+
+  [aria-label='mobile-button-login'] {
+    @media (min-width: setup.$header-nav-breakpoint-min) {
+      display: none;
+    }
+  }
+
+  [aria-label='desktop-button-login'] {
+    @media (max-width: setup.$header-nav-breakpoint-max) {
+      display: none;
+    }
+  }
 }
