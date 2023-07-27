@@ -1,0 +1,75 @@
+@use '../base/setup';
+@use '../settings/spacing';
+@use '../settings/font-weights' as fw;
+@use '../settings/font-sizes' as fs;
+@use '../tools/mixin';
+@use '../tools/responsive';
+
+.blog-post {
+  width: 100%;
+  margin-bottom: 26px;
+
+  @media (min-width: responsive.$mobile_md) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & &__image {
+    @include mixin.aspectRatioImageWide();
+    overflow: hidden;
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+
+    img {
+      @include mixin.animate(transform);
+      @include mixin.coverImage();
+      width: 100%;
+    }
+  }
+
+  & &__body {
+    background-color: setup.$light-background-color;
+    padding: spacing.$xs calc(spacing.$xs + 2px);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  & &__date {
+    display: block;
+    color: setup.$accent-color;
+    font-size: fs.$size-xxs;
+    font-weight: fw.$medium;
+    margin-bottom: 4px;
+  }
+
+  & &__title {
+    margin-bottom: 8px;
+
+    &:hover {
+      color: setup.$accent-color;
+    }
+  }
+
+  & &__text {
+    margin-bottom: 6px;
+  }
+
+  & &__link {
+    font-size: fs.$size-xxs;
+    font-weight: fw.$medium;
+    color: setup.$base-text-color;
+
+    @media (min-width: responsive.$mobile_md) {
+      margin-top: auto;
+    }
+
+    &:hover {
+      color: setup.$accent-color;
+    }
+  }
+}
