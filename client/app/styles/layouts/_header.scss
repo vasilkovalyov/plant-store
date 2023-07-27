@@ -5,6 +5,9 @@
 @use '../tools/responsive';
 
 .header {
+  position: relative;
+  z-index: 1;
+
   &.nav-active .header__navigation {
     @media (max-width: setup.$header-nav-breakpoint-max) {
       transform: translate(0);
@@ -47,7 +50,7 @@
   & &__navigation {
     @media (max-width: setup.$header-nav-breakpoint-max) {
       @include mixin.absoluteCover();
-      top: 56px;
+      top: 54px;
       height: 100vh;
       padding-top: spacing.$xs;
       padding-left: setup.$padding-container;

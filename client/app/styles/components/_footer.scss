@@ -1,0 +1,17 @@
+@use '../base/setup';
+@use '../settings/font-sizes' as fz;
+@use '../settings/spacing';
+
+.footer {
+  &__copyright {
+    padding-top: spacing.$s;
+    padding-bottom: spacing.$s;
+    text-align: center;
+
+    p {
+      margin-bottom: 0;
+      color: setup.$base-text-color;
+      font-size: fz.$size-xxs;
+    }
+  }
+}

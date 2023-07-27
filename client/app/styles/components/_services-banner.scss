@@ -1,9 +1,15 @@
 @use '../base/setup';
+@use '../settings/spacing';
 @use '../tools/responsive';
 
 .services-banner {
   background-color: setup.$light-background-color;
-  padding-top: 24px;
+  padding-top: spacing.$l;
+  padding-bottom: spacing.$l;
+
+  @media (min-width: responsive.$tablet_large) {
+    padding-bottom: 0;
+  }
 
   & &__container {
     @media (min-width: responsive.$tablet_large) {
