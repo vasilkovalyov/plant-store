@@ -37,7 +37,6 @@ address {
 
 html,
 body {
-  color: setup.$base-text-color;
   background: setup.$base-background-color;
   font: #{setup.$font-size-base}/#{setup.$line-height-base}
     setup.$base-font-family;

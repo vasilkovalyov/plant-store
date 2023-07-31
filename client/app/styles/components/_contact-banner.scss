@@ -10,7 +10,6 @@
 
   padding-top: spacing.$m;
   padding-bottom: spacing.$m;
-  // background-color: setup.$accent-color;
   background: rgba(70, 163, 88, 0.1);
 
   & &__container {
@@ -41,16 +40,9 @@
 
   & &__list {
     @include mixin.listreset();
-    display: flex;
-    flex-wrap: wrap;
-    // align-items: center;
-    align-items: baseline;
   }
 
   & &__list-item {
-    display: flex;
-    align-items: center;
-
     &:not(:last-child) {
       @media (max-width: responsive.$tablet_max) {
         margin-bottom: 10px;
@@ -59,8 +51,6 @@
     }
 
     &:nth-child(1) {
-      // margin-right: 36px;
-
       @media (min-width: responsive.$tablet) {
         margin-right: 40px;
       }
@@ -71,8 +61,6 @@
     }
 
     &:nth-child(2) {
-      // margin-right: 74px;
-
       @media (min-width: responsive.$tablet) {
         margin-right: 40px;
       }

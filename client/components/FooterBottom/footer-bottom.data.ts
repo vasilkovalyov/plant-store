@@ -1,6 +1,6 @@
 import { IconEnum } from '@/types/icons';
 import { IFooterNavProps } from '../FooterNav/footer-nav.type';
-import { ISocialProps } from '../SocialList/social-list.type';
+import { ISocialProps } from '../SocialMedia/social-media.type';
 
 export const footerNav: IFooterNavProps[] = [
   {

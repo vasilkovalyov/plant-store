@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ic070s');
-  src:  url('fonts/icomoon.eot?ic070s#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ic070s') format('truetype'),
-    url('fonts/icomoon.woff?ic070s') format('woff'),
-    url('fonts/icomoon.svg?ic070s#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?vn9u8v');
+  src:  url('fonts/icomoon.eot?vn9u8v#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?vn9u8v') format('truetype'),
+    url('fonts/icomoon.woff?vn9u8v') format('woff'),
+    url('fonts/icomoon.svg?vn9u8v#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -101,4 +101,34 @@
 }
 .icon-heart:before {
   content: "\e917";
+}
+.icon-chevron-down:before {
+  content: "\e90c";
+}
+.icon-add:before {
+  content: "\e90d";
+}
+.icon-star-outline:before {
+  content: "\e90e";
+}
+.icon-star-half:before {
+  content: "\e90f";
+}
+.icon-star:before {
+  content: "\e910";
+}
+.icon-logout:before {
+  content: "\e911";
+}
+.icon-eye-cross:before {
+  content: "\e912";
+}
+.icon-eye:before {
+  content: "\e913";
+}
+.icon-envelope:before {
+  content: "\e914";
+}
+.icon-arrow-right:before {
+  content: "\e919";
 }

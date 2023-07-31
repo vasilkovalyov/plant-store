@@ -8,13 +8,14 @@
   transform: rotate(0deg);
   transition: 0.5s ease-in-out;
   cursor: pointer;
+  min-width: auto;
 
   span {
     display: block;
     position: absolute;
     height: 3px;
     width: 100%;
-    background: setup.$base-text-color;
+    background: setup.$accent-color;
     border-radius: 6px;
     opacity: 1;
     left: 0;

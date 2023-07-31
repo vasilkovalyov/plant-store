@@ -1,4 +1,7 @@
-import Container from '../Container/container';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+
 import CtaForm from '../CtaForm/cta-form';
 import Service from '../Service/service';
 import { IService } from '../Service/service.type';
@@ -35,24 +38,36 @@ const services: IService[] = [
 
 export default function ServicesBanner() {
   return (
-    <div className="services-banner">
+    <Box className="services-banner" paddingY={3}>
       <Container className="services-banner__container">
-        <div className="services-banner__body">
-          <div className="services-banner__grid">
-            {services.map((service) => (
-              <div key={service.id} className="services-banner__col">
-                <Service {...service} />
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="services-banner__aside">
-          <CtaForm
-            title="Would you like to join newsletters?"
-            text="We usually post offers and challenges in newsletter. We’re your online houseplant destination. We offer a wide range of houseplants and accessories shipped directly from our (green)house to yours!"
-          />
-        </div>
+        <Grid container columnSpacing={2.4} justifyContent="space-between">
+          <Grid item md={8} className="services-banner__body">
+            <Grid
+              container
+              columnSpacing={[2, 2, 2, 5.2]}
+              className="services-banner__grid"
+            >
+              {services.map((service) => (
+                <Grid
+                  key={service.id}
+                  item
+                  sm={6}
+                  md={4}
+                  className="services-banner__col"
+                >
+                  <Service {...service} />
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
+          <Grid item xs={12} md={3.8} className="services-banner__aside">
+            <CtaForm
+              title="Would you like to join newsletters?"
+              text="We usually post offers and challenges in newsletter. We’re your online houseplant destination. We offer a wide range of houseplants and accessories shipped directly from our (green)house to yours!"
+            />
+          </Grid>
+        </Grid>
       </Container>
-    </div>
+    </Box>
   );
 }

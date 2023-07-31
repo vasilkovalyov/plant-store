@@ -7,7 +7,6 @@
 
 .blog-post {
   width: 100%;
-  margin-bottom: 26px;
 
   @media (min-width: responsive.$mobile_md) {
     display: flex;
@@ -40,11 +39,7 @@
   }
 
   & &__date {
-    display: block;
     color: setup.$accent-color;
-    font-size: fs.$size-xxs;
-    font-weight: fw.$medium;
-    margin-bottom: 4px;
   }
 
   & &__title {
@@ -53,10 +48,10 @@
     &:hover {
       color: setup.$accent-color;
     }
-  }
 
-  & &__text {
-    margin-bottom: 6px;
+    a {
+      color: inherit;
+    }
   }
 
   & &__link {

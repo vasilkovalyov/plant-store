@@ -23,4 +23,5 @@ export enum IconEnum {
   Phone = 'phone',
   HeartEmpty = 'heart-empty',
   Heart = 'heart',
+  ArrowRight = 'arrow-right',
 }

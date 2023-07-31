@@ -1,21 +1,28 @@
+import Box from '@mui/material/Box';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import Typography from '@mui/material/Typography';
+
 import Link from 'next/link';
 import { IFooterNavProps } from './footer-nav.type';
 
 export default function FooterNav({ items, title }: IFooterNavProps) {
   return (
-    <div className="footer-nav">
-      <h6 className="footer-nav__title">{title}</h6>
+    <Box className="footer-nav" marginBottom={2.5}>
+      <Typography variant="h6" className="footer-nav__title" marginBottom={1.2}>
+        {title}
+      </Typography>
       {items.length ? (
-        <ul className="footer-nav__list">
+        <List className="footer-nav__list">
           {items.map((item) => (
-            <li key={item.id} className="footer-nav__list-item">
+            <ListItem key={item.id} className="footer-nav__list-item">
               <Link href={item.href} className="footer-nav__list-link">
                 {item.title}
               </Link>
-            </li>
+            </ListItem>
           ))}
-        </ul>
+        </List>
       ) : null}
-    </div>
+    </Box>
   );
 }

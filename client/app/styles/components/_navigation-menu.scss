@@ -6,8 +6,6 @@
 @use '../tools/mixin';
 
 .navigation-menu {
-  @include mixin.listreset();
-
   @media (max-width: setup.$header-nav-breakpoint-max) {
     margin-bottom: 10px;
   }
@@ -19,10 +17,12 @@
 
   &__item {
     position: relative;
+    width: auto;
 
     @media (min-width: setup.$header-nav-breakpoint-min) {
       margin-left: 25px;
       margin-right: 25px;
+      margin-bottom: 0;
       padding-top: spacing.$l;
       padding-bottom: spacing.$l;
     }

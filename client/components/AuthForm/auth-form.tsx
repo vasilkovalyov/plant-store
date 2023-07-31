@@ -1,9 +1,12 @@
 'use client';
 import { useState } from 'react';
 import cn from 'classnames';
+
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+
 import LoginForm from '../LoginForm/login-form';
 import RegisterForm from '../RegisterForm/register-form';
-import Button from '../Button/button';
 
 type FormType = 'login' | 'register';
 
@@ -15,10 +18,11 @@ export default function AuthForm() {
   }
 
   return (
-    <div className="auth-form">
-      <div className="auth-form__toggle-box">
+    <Box className="auth-form">
+      <Box className="auth-form__toggle-box">
         <Button
           variant="text"
+          size="small"
           className={cn('auth-form__toggle-form-button', {
             active: formVariant === 'login',
           })}
@@ -28,6 +32,7 @@ export default function AuthForm() {
         </Button>
         <Button
           variant="text"
+          size="small"
           className={cn('auth-form__toggle-form-button', {
             active: formVariant === 'register',
           })}
@@ -35,13 +40,9 @@ export default function AuthForm() {
         >
           Register
         </Button>
-      </div>
-      <div hidden={formVariant !== 'login'}>
-        <LoginForm />
-      </div>
-      <div hidden={formVariant !== 'register'}>
-        <RegisterForm />
-      </div>
-    </div>
+      </Box>
+      {formVariant === 'login' ? <LoginForm /> : null}
+      {formVariant === 'register' ? <RegisterForm /> : null}
+    </Box>
   );
 }

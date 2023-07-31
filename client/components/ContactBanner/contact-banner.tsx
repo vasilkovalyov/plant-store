@@ -1,22 +1,31 @@
 import Image from 'next/image';
+
+import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+
 import Icon from '../Icon/icon';
 import { IconEnum } from '@/types/icons';
-import Container from '../Container/container';
 
 export default function ContactBanner() {
   return (
-    <div className="contact-banner">
+    <Box className="contact-banner">
       <Container className="contact-banner__container">
-        <div className="contact-banner__logo">
+        <Box className="contact-banner__logo">
           <Image
             src="/images/logo.png"
             alt="green shop"
             width={150}
             height={34}
           />
-        </div>
-        <ul className="contact-banner__list">
-          <li className="contact-banner__list-item">
+        </Box>
+        <Stack direction="row" flexWrap="wrap" className="contact-banner__list">
+          <Box
+            component="li"
+            className="contact-banner__list-item"
+            display="flex"
+            alignItems="center"
+          >
             <Icon
               icon={IconEnum.Location}
               className="contact-banner__list-icon"
@@ -24,8 +33,13 @@ export default function ContactBanner() {
             <address className="contact-banner__list-address">
               70 West Buckingham Ave. Farmingdale, NY 11735
             </address>
-          </li>
-          <li className="contact-banner__list-item">
+          </Box>
+          <Box
+            component="li"
+            className="contact-banner__list-item"
+            display="flex"
+            alignItems="center"
+          >
             <Icon
               icon={IconEnum.Envelope}
               className="contact-banner__list-icon"
@@ -36,8 +50,13 @@ export default function ContactBanner() {
             >
               contact@greenshop.com
             </a>
-          </li>
-          <li className="contact-banner__list-item">
+          </Box>
+          <Box
+            component="li"
+            className="contact-banner__list-item"
+            display="flex"
+            alignItems="center"
+          >
             <Icon icon={IconEnum.Phone} className="contact-banner__list-icon" />
             <a
               href="tel:+88 01911 717 490"
@@ -45,9 +64,9 @@ export default function ContactBanner() {
             >
               +88 01911 717 490
             </a>
-          </li>
-        </ul>
+          </Box>
+        </Stack>
       </Container>
-    </div>
+    </Box>
   );
 }

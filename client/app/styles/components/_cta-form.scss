@@ -22,23 +22,27 @@
 .cta-field {
   position: relative;
   border-radius: 6px;
-  background: setup.$base-background-color;
   box-shadow: 0px 0px 20px 0px rgba(colors.$black, 0.06);
   margin-bottom: 20px;
   overflow: hidden;
 
   & &__input {
-    padding: spacing.$xs 90px spacing.$xs spacing.$xs;
-    width: 100%;
-    border: none;
-    outline: none;
-    color: setup.$text-color-light;
-    font-family: setup.$base-font-family;
-    font-size: fz.$size-xxs;
-    font-style: normal;
+    .MuiInputBase-root {
+      .MuiOutlinedInput-notchedOutline {
+        border-color: transparent;
+      }
 
-    &::placeholder {
-      color: setup.$text-color-light;
+      &:hover {
+        .MuiOutlinedInput-notchedOutline {
+          border-color: transparent;
+        }
+      }
+    }
+
+    .MuiInputBase-input {
+      padding: spacing.$xs 90px spacing.$xs spacing.$xs;
+      border: none;
+      outline: none;
     }
   }
 

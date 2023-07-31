@@ -1,4 +1,4 @@
 export interface ICtaFormProps {
-  title: string;
+  title?: string;
   text?: string;
 }

@@ -1,6 +1,11 @@
 'use client';
 import { useState } from 'react';
-import Container from '@/components/Container/container';
+
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+
 import { ISectionBlogPostsProps } from './section-blog-posts.type';
 import { IBlogPostProps } from '@/components/BlogPost/blog-post.type';
 import BlogPost from '@/components/BlogPost/blog-post';
@@ -43,23 +48,50 @@ export default function SectionBlogPost({
       text: 'The benefits of houseplants are endless. In addition to..',
       title: 'Best Houseplants Room by Room',
     },
+    {
+      id: '4',
+      image: {
+        url: '/images/01.jpg',
+        alt: 'Top 10 Succulents for Your Home',
+      },
+      date: '2023-07-27T19:54:38.483Z',
+      path: '/',
+      text: 'Best in hanging baskets. Prefers medium to high light.',
+      title: 'Top 10 Succulents for Your Home',
+    },
   ]);
   console.log(posts);
   return (
-    <div className="section-blog-posts">
+    <Box component="section" className="section-blog-posts">
       <Container>
-        {title && <h2 className="section-blog-posts__title">{title}</h2>}
-        {text && <p className="section-blog-posts__text">{text}</p>}
+        {title && (
+          <Typography variant="h2" textAlign="center" marginBottom={2}>
+            {title}
+          </Typography>
+        )}
+        {text && (
+          <Typography variant="body1" textAlign="center" marginBottom={4}>
+            {text}
+          </Typography>
+        )}
         {posts && posts.length ? (
-          <div className="section-blog-posts__grid">
+          <Grid container spacing={3}>
             {posts.map((post) => (
-              <div key={post.id} className="section-blog-posts__col">
+              <Grid
+                key={post.id}
+                item
+                xs={12}
+                sm={6}
+                md={4}
+                lg={3}
+                display="flex"
+              >
                 <BlogPost {...post} />
-              </div>
+              </Grid>
             ))}
-          </div>
+          </Grid>
         ) : null}
       </Container>
-    </div>
+    </Box>
   );
 }

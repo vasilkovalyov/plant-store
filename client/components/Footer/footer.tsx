@@ -1,4 +1,6 @@
-import Container from '../Container/container';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+
 import ContactBanner from '../ContactBanner/contact-banner';
 import ServicesBanner from '../ServicesBanner/services-banner';
 import FooterBottom from '../FooterBottom/footer-bottom';
@@ -7,14 +9,14 @@ export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="footer">
-      <Container className="footer__contaner">
-        <ServicesBanner />
-        <ContactBanner />
-        <FooterBottom />
-        <div className="footer__copyright">
-          <p>© {year} GreenShop. All Rights Reserved.</p>
-        </div>
-      </Container>
+      <ServicesBanner />
+      <ContactBanner />
+      <FooterBottom />
+      <Box paddingY={1.5}>
+        <Typography variant="body1" textAlign="center">
+          © {year} GreenShop. All Rights Reserved.
+        </Typography>
+      </Box>
     </footer>
   );
 }

@@ -7,73 +7,19 @@
 @use '../tools/responsive';
 
 .footer-bottom {
-  padding-top: spacing.$xl;
-  padding-bottom: spacing.$xxl;
   background-color: setup.$light-background-color;
   border-bottom: 1px solid rgba(70, 163, 88, 0.2);
-
-  & &__container {
-    @media (min-width: responsive.$tablet) {
-      display: flex;
-    }
-  }
-
-  & &__body {
-    margin-bottom: 20px;
-
-    @media (min-width: responsive.$tablet) {
-      width: 70%;
-      margin-bottom: 0;
-    }
-  }
 
   & &__title {
     font-size: calc(fz.$h6-medium + 1px);
   }
 
-  & &__grid {
-    @media (min-width: responsive.$mobile_md) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      margin-left: -(setup.$column-gap);
-      margin-right: -(setup.$column-gap);
-    }
-  }
-
-  & &__col {
-    @media (min-width: responsive.$mobile_md) {
-      width: 33.33%;
-      padding-left: setup.$column-gap;
-      padding-right: setup.$column-gap;
-    }
-  }
-
-  & &__aside {
-    @media (min-width: responsive.$tablet) {
-      width: 30%;
-    }
-  }
-
   & &__social-media {
     margin-bottom: 14px;
 
-    .social-media__list {
-      gap: 6px;
-    }
-
     .social-media__item {
-      width: 32px;
-      height: 32px;
       border-radius: 4px;
       border: 1px solid rgba(70, 163, 88, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .social-media__link {
-      display: flex;
     }
   }
 }

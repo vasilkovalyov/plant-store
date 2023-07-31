@@ -67,6 +67,8 @@
 
   & &__auth-info {
     .button {
+      padding: 0;
+
       &:not(.button-login) {
         padding: 0;
       }
@@ -75,15 +77,40 @@
         margin-left: 16px;
       }
     }
+  }
 
-    .button-login {
-      svg {
-        margin-right: 4px;
-      }
+  & &__button-login {
+    color: colors.$white;
+    background-color: setup.$accent-color;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    height: 35px;
+    padding: 8px 12px;
+
+    @media (min-width: setup.$header-nav-breakpoint-min) {
+      margin-left: 14px;
+    }
+
+    svg {
+      margin-right: 4px;
+    }
+  }
+
+  & &__button-icon {
+    padding-left: 4px;
+    padding-right: 4px;
+    min-width: auto;
+
+    &:not(:first-child) {
+      margin-left: 8px;
     }
   }
 
   & &__toggler-menu {
+    border: none;
+    margin-left: 14px;
+
     @media (min-width: setup.$header-nav-breakpoint-min) {
       display: none;
     }

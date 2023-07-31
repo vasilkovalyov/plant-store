@@ -2,11 +2,16 @@
 import { useState } from 'react';
 import cn from 'classnames';
 import Image from 'next/image';
-import Container from '../Container/container';
+import Link from 'next/link';
+
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+
 import Icon from '../Icon/icon';
 import { IconEnum } from '@/types/icons';
 import NavigationMenu from '../NavigationMenu/navigation-menu';
-import Button from '../Button/button';
 import { NavigationMenuItemType } from '../NavigationMenu/navigation-menu.type';
 
 const menu: NavigationMenuItemType[] = [
@@ -46,14 +51,14 @@ export default function Header() {
       })}
     >
       <Container className="header__container">
-        <div className="header__logo">
+        <Box className="header__logo">
           <Image
             src="/images/logo.png"
             alt="green shop"
             width={150}
             height={34}
           />
-        </div>
+        </Box>
         <nav className="header__navigation">
           <NavigationMenu menu={menu} />
           <Button
@@ -61,29 +66,33 @@ export default function Header() {
             variant="contained"
             className="button-login"
             aria-label="mobile-button-login"
+            size="small"
           >
             <Icon icon={IconEnum.Logout} />
             Login
           </Button>
         </nav>
-        <div className="header__auth-info">
-          <Button>
+        <Stack
+          className="header__auth-info"
+          direction="row"
+          alignItems="center"
+        >
+          <Button variant="text" size="small" className="header__button-icon">
             <Icon icon={IconEnum.Search} />
           </Button>
-          <Button>
-            <Icon icon={IconEnum.Cart} />
+          <Button variant="text" size="small" className="header__button-icon">
+            <Icon icon={IconEnum.Cart} size={26} />
           </Button>
-          <Button
+          <Link
             color="primary"
-            variant="contained"
-            className="button-login"
+            className="header__button-login"
             aria-label="desktop-button-login"
             href="/auth"
           >
             <Icon icon={IconEnum.Logout} />
             Login
-          </Button>
-          <Button
+          </Link>
+          <button
             className={cn('header__toggler-menu hamburger', {
               active: activeMenu === true,
             })}
@@ -93,8 +102,8 @@ export default function Header() {
             <span></span>
             <span></span>
             <span></span>
-          </Button>
-        </div>
+          </button>
+        </Stack>
       </Container>
     </header>
   );

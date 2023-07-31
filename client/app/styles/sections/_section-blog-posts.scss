@@ -6,34 +6,25 @@
   padding-top: calc(spacing.$xl * 2);
   padding-bottom: calc(spacing.$xl * 2);
 
-  & &__title {
-    text-align: center;
-    margin-bottom: 15px;
-  }
+  // & &__grid {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   margin-left: -(setup.$column-gap);
+  //   margin-right: -(setup.$column-gap);
+  // }
 
-  & &__text {
-    text-align: center;
-  }
+  // & &__col {
+  //   padding-left: setup.$column-gap;
+  //   padding-right: setup.$column-gap;
+  //   width: 100%;
 
-  & &__grid {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -(setup.$column-gap);
-    margin-right: -(setup.$column-gap);
-  }
+  //   @media (min-width: responsive.$mobile_md) {
+  //     display: flex;
+  //     width: 50%;
+  //   }
 
-  & &__col {
-    padding-left: setup.$column-gap;
-    padding-right: setup.$column-gap;
-    width: 100%;
-
-    @media (min-width: responsive.$mobile_md) {
-      display: flex;
-      width: 50%;
-    }
-
-    @media (min-width: responsive.$tablet) {
-      width: 33.33%;
-    }
-  }
+  //   @media (min-width: responsive.$tablet) {
+  //     width: 33.33%;
+  //   }
+  // }
 }

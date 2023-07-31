@@ -1,26 +1,9 @@
 @use '../base/setup';
-@use '../settings/font-weights' as fw;
 @use '../settings/font-sizes' as fz;
-@use '../settings/colors';
-@use '../settings/spacing';
-@use '../tools/mixin';
 
 .footer-nav {
-  margin-bottom: 20px;
-
   & &__title {
-    margin-bottom: 8px;
     font-size: calc(fz.$h6-medium + 1px);
-  }
-
-  & &__list {
-    @include mixin.listreset();
-  }
-
-  & &__list-item {
-    &:not(:last-child) {
-      margin-bottom: 10px;
-    }
   }
 
   & &__list-link {
