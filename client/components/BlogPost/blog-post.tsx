@@ -19,9 +19,11 @@ export default function BlogPost({
 }: IBlogPostProps) {
   return (
     <Box className="blog-post">
-      <Link href={path} className="blog-post__image">
-        <Image src={image.url} alt={image.alt} width={268} height={200} />
-      </Link>
+      {image ? (
+        <Link href={path} className="blog-post__image">
+          <Image src={image.url} alt={image.alt} width={268} height={200} />
+        </Link>
+      ) : null}
       <Box className="blog-post__body">
         <Typography
           marginBottom={0.5}
