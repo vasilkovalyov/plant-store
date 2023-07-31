@@ -11,3 +11,13 @@ export interface IBlogPost {
   text: string;
   path: string;
 }
+
+export interface IProduct {
+  id: string;
+  image?: IImage;
+  title: string;
+  path: string;
+  price: string;
+  old_price?: string;
+  discount?: string;
+}

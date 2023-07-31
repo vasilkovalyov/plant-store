@@ -53,6 +53,7 @@ const theme = createTheme({
         root: {
           textTransform: 'none',
           fontFamily: 'Cera Pro',
+          minWidth: 'auto',
         },
         sizeSmall: {
           height: 35,

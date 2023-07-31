@@ -18,6 +18,7 @@ import Service from '@/components/Service/service';
 import BlogPost from '@/components/BlogPost/blog-post';
 import FooterNav from '@/components/FooterNav/footer-nav';
 import SocialMedia from '@/components/SocialMedia/social-media';
+import Product from '@/components/Product/product';
 import Icon from '@/components/Icon/icon';
 import { IconEnum } from '@/types/icons';
 
@@ -239,6 +240,55 @@ export default function Components() {
                 path="/"
               />
             </Box>
+          </Box>
+          <Box marginY={3}>
+            <Divider />
+          </Box>
+          <Box marginBottom={4}>
+            <Typography variant="h5" marginBottom={2}>
+              Product
+            </Typography>
+            <Grid container spacing={2}>
+              <Grid item md={3}>
+                <Product
+                  id={'product-1'}
+                  image={{
+                    url: '/images/product-1.jpg',
+                    alt: 'Lorem ipsum dolor',
+                  }}
+                  title="Lorem ipsum dolor"
+                  path="/"
+                  price="199.00"
+                />
+              </Grid>
+              <Grid item md={3}>
+                <Product
+                  id={'product-1'}
+                  image={{
+                    url: '/images/product-1.jpg',
+                    alt: 'Lorem ipsum dolor',
+                  }}
+                  title="Lorem ipsum dolor"
+                  path="/"
+                  price="199.00"
+                  old_price="229.00"
+                />
+              </Grid>
+              <Grid item md={3}>
+                <Product
+                  id={'product-1'}
+                  image={{
+                    url: '/images/product-1.jpg',
+                    alt: 'Lorem ipsum dolor',
+                  }}
+                  title="Lorem ipsum dolor"
+                  path="/"
+                  price="199.00"
+                  old_price="229.00"
+                  discount="13"
+                />
+              </Grid>
+            </Grid>
           </Box>
           <Box marginY={3}>
             <Divider />
