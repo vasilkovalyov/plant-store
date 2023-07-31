@@ -132,6 +132,7 @@ const theme = createTheme({
           borderRadius: 6,
           overflow: 'hidden',
           marginTop: 0,
+          width: '100%',
         },
         input: {
           backgroundColor: colors.white,
@@ -160,7 +161,7 @@ const theme = createTheme({
           width: '100%',
           backgroundColor: colors.white,
           marginTop: 0,
-          height: 20,
+          height: 26,
           paddingTop: 8,
           paddingBottom: 8,
           paddingLeft: 20,
