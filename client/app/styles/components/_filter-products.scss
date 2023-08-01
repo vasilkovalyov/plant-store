@@ -1,0 +1,37 @@
+@use '../base/setup';
+@use '../settings/font-weights' as fw;
+@use '../settings/font-sizes' as fz;
+@use '../settings/colors';
+@use '../settings/spacing';
+@use '../tools/responsive';
+@use '../tools/mixin';
+
+.filter-products {
+  background-color: setup.$light-background-color;
+  padding: spacing.$xs spacing.$s;
+
+  @media (max-width: responsive.$tablet_large_max) {
+    @include mixin.fillBlockFixed();
+    @include mixin.animate(opacity visibility transform);
+
+    z-index: 2;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+  }
+
+  & &__close-filter-mobile {
+    @media (min-width: responsive.$tablet_large) {
+      display: none;
+    }
+  }
+
+  &.active {
+    @media (max-width: responsive.$tablet_large_max) {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}

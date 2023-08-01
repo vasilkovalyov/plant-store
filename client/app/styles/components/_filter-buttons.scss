@@ -1,0 +1,41 @@
+@use '../base/setup';
+@use '../settings/font-weights' as fw;
+@use '../settings/font-sizes' as fz;
+@use '../settings/colors';
+@use '../settings/spacing';
+@use '../tools/mixin';
+
+.filter-buttons {
+  &__button {
+    padding: 0;
+    color: setup.$base-text-color;
+    font-weight: fw.$normal;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: setup.$accent-color;
+      opacity: 0;
+      visibility: hidden;
+      @include mixin.animate(opacity visibility);
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &.active {
+      font-weight: fw.$bold;
+      color: setup.$accent-color;
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

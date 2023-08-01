@@ -1,0 +1,19 @@
+@use '../base/setup';
+@use '../settings/font-weights' as fw;
+@use '../settings/font-sizes' as fz;
+@use '../settings/colors';
+@use '../settings/spacing';
+@use '../tools/mixin';
+
+.filter-category {
+  margin-bottom: 20px;
+
+  &__list-item {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  &__list-item-count {
+    margin-left: auto;
+  }
+}

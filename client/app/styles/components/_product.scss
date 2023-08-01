@@ -14,10 +14,6 @@
     background-color: setup.$light-background-color;
 
     &:hover {
-      img {
-        transform: scale(1.1);
-      }
-
       .product__buttons-bar {
         transform: translateY(0);
       }
@@ -49,6 +45,14 @@
     padding: 4px;
     color: setup.$base-text-color;
     border-radius: 4px;
+
+    &:hover {
+      svg {
+        path {
+          fill: setup.$accent-color;
+        }
+      }
+    }
   }
 
   & &__discount {

@@ -1,0 +1,24 @@
+@use '../base/setup';
+@use '../settings/spacing';
+@use '../tools/responsive';
+
+.sort-select {
+  display: flex;
+  align-items: center;
+
+  &__title {
+    margin-right: 4px;
+  }
+
+  .MuiInputBase-root {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  .MuiSelect-select {
+    padding: 4px 30px 4px 10px;
+    height: auto;
+  }
+}
