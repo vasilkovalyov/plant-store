@@ -1,0 +1,45 @@
+@use '../base/setup';
+@use '../settings/spacing';
+@use '../settings/colors';
+@use '../settings/font-sizes' as fz;
+@use '../settings/font-weights' as fw;
+@use '../tools/responsive';
+
+.coupon-field {
+  position: relative;
+  border-radius: 6px;
+  margin-bottom: 20px;
+
+  & &__input {
+    .MuiInputBase-root {
+      .MuiOutlinedInput-notchedOutline {
+        border-color: setup.$accent-color;
+      }
+
+      &:hover {
+        .MuiOutlinedInput-notchedOutline {
+          border-color: setup.$accent-color;
+        }
+      }
+    }
+
+    .MuiInputBase-input {
+      padding: spacing.$xs 90px spacing.$xs spacing.$xs;
+    }
+  }
+
+  & &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    font-size: fz.$size-xs;
+    font-weight: fw.$bold;
+    padding-right: spacing.$m;
+    padding-left: spacing.$m;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 34px;
+    box-shadow: none;
+  }
+}

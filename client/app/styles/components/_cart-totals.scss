@@ -1,0 +1,42 @@
+@use '../base/setup';
+@use '../settings/font-weights' as fw;
+@use '../settings/font-sizes' as fz;
+@use '../settings/colors';
+@use '../settings/spacing';
+@use '../tools/mixin';
+
+.cart-totals {
+  & &__devider {
+    width: 100%;
+    background: setup.$accent-color;
+  }
+
+  & &__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & &__price-category {
+    font-size: fz.$size-m;
+    font-weight: fw.$bold;
+  }
+
+  & &__title-total {
+    font-size: fz.$size-s;
+    font-weight: fw.$bold;
+  }
+
+  & &__price-total {
+    color: setup.$accent-color;
+    font-size: fz.$size-m;
+    font-weight: fw.$bold;
+  }
+
+  & &__link-shop {
+    text-align: center;
+    padding: spacing.$xs;
+    display: block;
+    margin-top: 10px;
+  }
+}

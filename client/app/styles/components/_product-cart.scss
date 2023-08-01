@@ -1,0 +1,33 @@
+@use '../base/setup';
+@use '../settings/font-weights' as fw;
+@use '../settings/font-sizes' as fz;
+@use '../settings/colors';
+@use '../settings/spacing';
+@use '../tools/responsive';
+@use '../tools/mixin';
+
+.product-cart {
+  display: flex;
+  align-items: center;
+
+  & &__image {
+    flex: 0 1 70px;
+    margin-right: 14px;
+  }
+
+  & &__title {
+    a {
+      color: inherit;
+    }
+  }
+
+  & &__body {
+    flex: 1;
+  }
+
+  & &__code {
+    > span {
+      color: setup.$base-text-color;
+    }
+  }
+}

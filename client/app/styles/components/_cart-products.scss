@@ -1,0 +1,21 @@
+@use '../base/setup';
+@use '../settings/font-weights' as fw;
+@use '../settings/font-sizes' as fz;
+@use '../settings/colors';
+@use '../settings/spacing';
+@use '../tools/mixin';
+
+.cart-products {
+  &__table {
+    .MuiTableCell-head {
+      padding-top: 0;
+    }
+  }
+
+  &__button {
+    padding: spacing.$xxxs;
+    min-width: auto;
+    width: 25px;
+    height: 25px;
+  }
+}
