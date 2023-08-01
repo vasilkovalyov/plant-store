@@ -9,6 +9,7 @@ import Typography from '@mui/material/Typography';
 import { IProductProps } from './product.type';
 import Icon from '../Icon/icon';
 import { IconEnum } from '@/types/icons';
+import { targetCurrencySymbol } from '@/constants/common';
 
 export default function Product({
   image,
@@ -64,14 +65,18 @@ export default function Product({
             color="primary"
             className="product__price"
           >
-            ${price}
+            {targetCurrencySymbol}
+            {price}
           </Typography>
-          <Typography
-            variant="subtitle1"
-            className="product__price product__old-price"
-          >
-            ${old_price}
-          </Typography>
+          {old_price ? (
+            <Typography
+              variant="subtitle1"
+              className="product__price product__old-price"
+            >
+              {targetCurrencySymbol}
+              {old_price}
+            </Typography>
+          ) : null}
         </Stack>
       </Box>
     </Box>

@@ -1,0 +1,56 @@
+@use '../base/setup';
+@use '../settings/spacing';
+@use '../tools/responsive';
+
+.section-shop {
+  &__body {
+    display: flex;
+  }
+
+  .filter-products {
+    @media (min-width: responsive.$tablet_large) {
+      display: block;
+      flex: 0 1 240px;
+      margin-right: 40px;
+    }
+
+    @media (min-width: responsive.$laptop) {
+      flex: 0 1 310px;
+    }
+  }
+
+  &__filter-open-menu {
+    margin-bottom: 20px;
+
+    @media (min-width: responsive.$tablet_large) {
+      display: none;
+    }
+  }
+
+  &__filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__filter-buttons {
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+
+  &__sort-select {
+    flex-direction: row;
+    margin-bottom: 20px !important;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+}
