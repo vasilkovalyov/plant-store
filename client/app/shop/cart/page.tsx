@@ -11,7 +11,7 @@ export default function ShopCart() {
   return (
     <Box component="section" className="section-shop-cart" paddingY={4}>
       <Container>
-        <Breadcrumbs aria-label="breadcrumb">
+        <Breadcrumbs>
           <Link href="/">Home</Link>
           <Link href="/shop">Shop</Link>
           <Typography variant="body1">Shop cart</Typography>

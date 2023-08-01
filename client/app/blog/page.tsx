@@ -10,11 +10,11 @@ export default function Blog() {
   return (
     <Box component="section" className="section-blogs" paddingY={4}>
       <Container>
-        <Breadcrumbs aria-label="breadcrumb">
+        <Breadcrumbs>
           <Link href="/">Home</Link>
           <Typography variant="body1">Blog</Typography>
         </Breadcrumbs>
-        <Typography variant="h2" textAlign="center">
+        <Typography variant="h2" marginY={2}>
           Blogs
         </Typography>
       </Container>
