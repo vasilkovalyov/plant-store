@@ -20,4 +20,5 @@ export interface IProduct {
   price: string;
   old_price?: string;
   discount?: string;
+  code: string;
 }

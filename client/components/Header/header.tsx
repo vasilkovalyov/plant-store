@@ -80,9 +80,9 @@ export default function Header() {
           <Button variant="text" size="small" className="header__button-icon">
             <Icon icon={IconEnum.Search} />
           </Button>
-          <Button variant="text" size="small" className="header__button-icon">
+          <Link href="/shop/cart" className="header__button-icon">
             <Icon icon={IconEnum.Cart} size={26} />
-          </Button>
+          </Link>
           <Link
             color="primary"
             className="header__button-login"

@@ -68,6 +68,7 @@ export default function Shop() {
       title: 'Barberton Daisy',
       path: '/',
       price: '119.00',
+      code: '1995751877960',
     },
     {
       id: '2',
@@ -78,6 +79,7 @@ export default function Shop() {
       title: 'Angel Wing Begonia',
       path: '/',
       price: '169.00',
+      code: '1995751877961',
     },
     {
       id: '3',
@@ -90,6 +92,7 @@ export default function Shop() {
       price: '199.00',
       old_price: '229.00',
       discount: '13',
+      code: '1995751877962',
     },
     {
       id: '4',
@@ -100,6 +103,7 @@ export default function Shop() {
       title: 'Beach Spider Lily',
       path: '/',
       price: '129.00',
+      code: '1995751877963',
     },
     {
       id: '5',
@@ -110,6 +114,7 @@ export default function Shop() {
       title: 'Blushing Bromeliad',
       path: '/',
       price: '139.00',
+      code: '1995751877964',
     },
     {
       id: '6',
@@ -120,6 +125,7 @@ export default function Shop() {
       title: 'Aluminum Plant',
       path: '/',
       price: '179.00',
+      code: '1995751877965',
     },
   ]);
 

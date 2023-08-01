@@ -251,7 +251,7 @@ export default function Components() {
             <Grid container spacing={2}>
               <Grid item md={3}>
                 <Product
-                  id={'product-1'}
+                  id="product-1"
                   image={{
                     url: '/images/product-1.jpg',
                     alt: 'Lorem ipsum dolor',
@@ -259,11 +259,12 @@ export default function Components() {
                   title="Lorem ipsum dolor"
                   path="/"
                   price="199.00"
+                  code="1995751877960"
                 />
               </Grid>
               <Grid item md={3}>
                 <Product
-                  id={'product-1'}
+                  id="product-2"
                   image={{
                     url: '/images/product-1.jpg',
                     alt: 'Lorem ipsum dolor',
@@ -272,11 +273,12 @@ export default function Components() {
                   path="/"
                   price="199.00"
                   old_price="229.00"
+                  code="1995751877961"
                 />
               </Grid>
               <Grid item md={3}>
                 <Product
-                  id={'product-1'}
+                  id="product-3"
                   image={{
                     url: '/images/product-1.jpg',
                     alt: 'Lorem ipsum dolor',
@@ -286,6 +288,7 @@ export default function Components() {
                   price="199.00"
                   old_price="229.00"
                   discount="13"
+                  code="1995751877962"
                 />
               </Grid>
             </Grid>
