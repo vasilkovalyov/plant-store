@@ -5,26 +5,4 @@
 .section-blog-posts {
   padding-top: calc(spacing.$xl * 2);
   padding-bottom: calc(spacing.$xl * 2);
-
-  // & &__grid {
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   margin-left: -(setup.$column-gap);
-  //   margin-right: -(setup.$column-gap);
-  // }
-
-  // & &__col {
-  //   padding-left: setup.$column-gap;
-  //   padding-right: setup.$column-gap;
-  //   width: 100%;
-
-  //   @media (min-width: responsive.$mobile_md) {
-  //     display: flex;
-  //     width: 50%;
-  //   }
-
-  //   @media (min-width: responsive.$tablet) {
-  //     width: 33.33%;
-  //   }
-  // }
 }

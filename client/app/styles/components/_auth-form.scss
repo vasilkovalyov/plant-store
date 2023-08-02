@@ -18,7 +18,7 @@
     font-weight: fw.$medium;
 
     &.active {
-      color: setup.$accent-color;
+      color: rgb(setup.$accent-color);
     }
 
     &:nth-child(1) {

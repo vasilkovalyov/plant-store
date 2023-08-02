@@ -1,0 +1,46 @@
+@use '../base/setup';
+@use '../settings/spacing';
+@use '../tools/responsive';
+@use '../tools/mixin';
+
+.section-hero-banner {
+  position: relative;
+  min-height: 280px;
+
+  @media (min-width: responsive.$tablet_large) {
+    min-height: 430px;
+  }
+
+  & &__container {
+    padding-top: calc(spacing.$xxl + spacing.$l);
+    padding-bottom: calc(spacing.$xxl + spacing.$l);
+  }
+
+  & &__content {
+    max-width: 530px;
+    width: 100%;
+  }
+
+  .carousel__wrapper {
+    height: 100%;
+  }
+
+  .swiper {
+    height: 100%;
+  }
+
+  .hero-banner-carousel {
+    @include mixin.absoluteCover();
+  }
+}
+
+.hero-banner-carousel {
+  & &__slide {
+    position: relative;
+    height: 100%;
+  }
+
+  & &__image {
+    object-fit: cover;
+  }
+}

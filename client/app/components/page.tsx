@@ -47,6 +47,9 @@ export default function Components() {
               <Typography variant="subtitle1">Subtitle 1</Typography>
             </Box>
             <Box>
+              <Typography variant="overline">overline text</Typography>
+            </Box>
+            <Box>
               <Link href="/">Link</Link>
             </Box>
           </Box>

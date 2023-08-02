@@ -10,7 +10,7 @@
 
   padding-top: spacing.$m;
   padding-bottom: spacing.$m;
-  background: rgba(70, 163, 88, 0.1);
+  background: rgba(setup.$accent-color, 0.1);
 
   & &__container {
     @media (min-width: responsive.$tablet) {
@@ -73,7 +73,7 @@
 
   & &__list-icon {
     margin-right: 10px;
-    color: setup.$accent-color;
+    color: rgb(setup.$accent-color);
   }
 
   & &__list-address {
@@ -92,7 +92,7 @@
     line-height: fz.$lh-xl;
 
     &:hover {
-      color: setup.$accent-color;
+      color: rgb(setup.$accent-color);
     }
   }
 }

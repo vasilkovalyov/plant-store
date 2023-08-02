@@ -42,7 +42,7 @@
       left: setup.$padding-container;
       right: setup.$padding-container;
       height: 1px;
-      background-color: setup.$accent-color;
+      background-color: rgb(setup.$accent-color);
       opacity: 0.5;
     }
   }
@@ -67,9 +67,7 @@
 
   & &__auth-info {
     .button {
-      padding: 0;
-
-      &:not(.button-login) {
+      &:not(.header__button-login) {
         padding: 0;
       }
 
@@ -80,14 +78,6 @@
   }
 
   & &__button-login {
-    color: colors.$white;
-    background-color: setup.$accent-color;
-    border-radius: 6px;
-    display: inline-flex;
-    align-items: center;
-    height: 35px;
-    padding: 8px 12px;
-
     @media (min-width: setup.$header-nav-breakpoint-min) {
       margin-left: 14px;
     }

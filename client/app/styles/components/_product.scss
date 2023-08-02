@@ -49,14 +49,14 @@
     &:hover {
       svg {
         path {
-          fill: setup.$accent-color;
+          fill: rgb(setup.$accent-color);
         }
       }
     }
   }
 
   & &__discount {
-    background-color: setup.$accent-color;
+    background-color: rgb(setup.$accent-color);
   }
 
   & &__title {
@@ -65,7 +65,7 @@
     }
 
     &:hover {
-      color: setup.$accent-color;
+      color: rgb(setup.$accent-color);
     }
   }
 

@@ -11,7 +11,7 @@
     font-size: fz.$size-xxs;
 
     &:hover {
-      color: setup.$accent-color;
+      color: rgb(setup.$accent-color);
     }
   }
 }

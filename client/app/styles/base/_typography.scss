@@ -2,7 +2,7 @@
 @use '../tools/mixin.scss';
 
 a {
-  color: setup.$base-link-color;
+  color: rgb(setup.$base-link-color);
   text-decoration: none;
 
   @include mixin.animate(color background-color);

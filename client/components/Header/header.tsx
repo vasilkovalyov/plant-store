@@ -64,7 +64,7 @@ export default function Header() {
           <Button
             color="primary"
             variant="contained"
-            className="button-login"
+            className="button-login button button--small button--primary button--contained"
             aria-label="mobile-button-login"
             size="small"
           >
@@ -85,7 +85,7 @@ export default function Header() {
           </Link>
           <Link
             color="primary"
-            className="header__button-login"
+            className="header__button-login button button--small button--primary button--contained"
             aria-label="desktop-button-login"
             href="/auth"
           >

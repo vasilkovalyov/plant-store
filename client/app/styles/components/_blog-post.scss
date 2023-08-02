@@ -39,14 +39,14 @@
   }
 
   & &__date {
-    color: setup.$accent-color;
+    color: rgb(setup.$accent-color);
   }
 
   & &__title {
     margin-bottom: 8px;
 
     &:hover {
-      color: setup.$accent-color;
+      color: rgb(setup.$accent-color);
     }
 
     a {
@@ -64,7 +64,7 @@
     }
 
     &:hover {
-      color: setup.$accent-color;
+      color: rgb(setup.$accent-color);
     }
   }
 }

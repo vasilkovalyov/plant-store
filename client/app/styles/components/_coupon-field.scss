@@ -13,12 +13,12 @@
   & &__input {
     .MuiInputBase-root {
       .MuiOutlinedInput-notchedOutline {
-        border-color: setup.$accent-color;
+        border-color: rgb(setup.$accent-color);
       }
 
       &:hover {
         .MuiOutlinedInput-notchedOutline {
-          border-color: setup.$accent-color;
+          border-color: rgb(setup.$accent-color);
         }
       }
     }

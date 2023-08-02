@@ -15,7 +15,7 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: colors.green,
+      main: `rgb(${colors.green})`,
       contrastText: colors.white,
     },
   },
@@ -50,6 +50,11 @@ const theme = createTheme({
     },
     MuiButton: {
       styleOverrides: {
+        containedPrimary: {
+          ':hover': {
+            backgroundColor: `rgb(${colors.green}, 0.8)`,
+          },
+        },
         root: {
           textTransform: 'none',
           fontFamily: 'Cera Pro',
@@ -284,6 +289,15 @@ theme.typography.subtitle1 = {
   fontWeight: 500,
   marginBottom: 16,
   border: 0,
+};
+
+theme.typography.overline = {
+  fontSize: fontSize.fz_1_xs,
+  color: colors.black,
+  fontWeight: 500,
+  marginBottom: 16,
+  border: 0,
+  textTransform: 'uppercase',
 };
 
 // ************

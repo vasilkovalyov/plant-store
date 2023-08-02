@@ -38,7 +38,7 @@ const services: IService[] = [
 
 export default function ServicesBanner() {
   return (
-    <Box className="services-banner" paddingY={3}>
+    <Box className="services-banner" paddingTop={3}>
       <Container className="services-banner__container">
         <Grid container columnSpacing={2.4} justifyContent="space-between">
           <Grid item md={8} className="services-banner__body">
@@ -53,6 +53,7 @@ export default function ServicesBanner() {
                   item
                   sm={6}
                   md={4}
+                  marginBottom={3}
                   className="services-banner__col"
                 >
                   <Service {...service} />
@@ -60,7 +61,13 @@ export default function ServicesBanner() {
               ))}
             </Grid>
           </Grid>
-          <Grid item xs={12} md={3.8} className="services-banner__aside">
+          <Grid
+            item
+            xs={12}
+            md={3.8}
+            marginBottom={3}
+            className="services-banner__aside"
+          >
             <CtaForm
               title="Would you like to join newsletters?"
               text="We usually post offers and challenges in newsletter. We’re your online houseplant destination. We offer a wide range of houseplants and accessories shipped directly from our (green)house to yours!"

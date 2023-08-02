@@ -8,7 +8,7 @@
 .cart-totals {
   & &__devider {
     width: 100%;
-    background: setup.$accent-color;
+    background: rgb(setup.$accent-color);
   }
 
   & &__list-item {
@@ -28,7 +28,7 @@
   }
 
   & &__price-total {
-    color: setup.$accent-color;
+    color: rgb(setup.$accent-color);
     font-size: fz.$size-m;
     font-weight: fw.$bold;
   }

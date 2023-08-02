@@ -18,7 +18,7 @@
       left: 0;
       right: 0;
       height: 2px;
-      background-color: setup.$accent-color;
+      background-color: rgb(setup.$accent-color);
       opacity: 0;
       visibility: hidden;
       @include mixin.animate(opacity visibility);
@@ -30,7 +30,7 @@
 
     &.active {
       font-weight: fw.$bold;
-      color: setup.$accent-color;
+      color: rgb(setup.$accent-color);
 
       &::after {
         opacity: 1;

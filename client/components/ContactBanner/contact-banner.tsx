@@ -6,6 +6,7 @@ import Container from '@mui/material/Container';
 
 import Icon from '../Icon/icon';
 import { IconEnum } from '@/types/icons';
+import colors from '@/theme/colors';
 
 export default function ContactBanner() {
   return (

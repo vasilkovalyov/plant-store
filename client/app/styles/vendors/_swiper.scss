@@ -1,0 +1,12 @@
+@use '../base/setup';
+
+.swiper-pagination {
+  .swiper-pagination-bullet {
+    background-color: rgba(setup.$accent-color, 0.3);
+    opacity: 1;
+
+    &-active {
+      background-color: rgb(setup.$accent-color);
+    }
+  }
+}

@@ -46,14 +46,14 @@
         left: 0;
         right: 0;
         height: 3px;
-        background-color: setup.$accent-color;
+        background-color: rgb(setup.$accent-color);
         opacity: 0;
         @include mixin.animate(opacity);
       }
     }
 
     &:hover {
-      color: setup.$accent-color;
+      color: rgb(setup.$accent-color);
 
       @media (min-width: setup.$header-nav-breakpoint-min) {
         &::after {
