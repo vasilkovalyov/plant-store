@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 
 import { ISectionHeroBannerProps } from './section-hero-banner.type';
 
-import Carousel from '@/components/Carousel/carousel';
+import Carousel from '@/components/Public/Carousel/carousel';
 
 export default function SectionHeroBanner({
   items,

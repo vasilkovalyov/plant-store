@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 
 import { ThemeProvider } from '@mui/material/styles';
 
-import Header from '@/components/Header/header';
-import Footer from '@/components/Footer/footer';
+import Header from '@/components/Public/Header/header';
+import Footer from '@/components/Public/Footer/footer';
 
 import lightTheme from '../theme/lightTheme';
 import { CssBaseline } from '@mui/material';

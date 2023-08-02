@@ -5,8 +5,8 @@ import Grid from '@mui/material/Grid';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import CartProducts from '@/components/CartProducts/cart-products';
-import CartTotals from '@/components/CartTotals/cart-totals';
+import CartProducts from '@/components/Public/CartProducts/cart-products';
+import CartTotals from '@/components/Public/CartTotals/cart-totals';
 
 export default function ShopCart() {
   return (

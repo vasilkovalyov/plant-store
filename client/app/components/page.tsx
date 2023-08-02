@@ -13,13 +13,13 @@ import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
 
 // custom components
-import CtaForm from '@/components/CtaForm/cta-form';
-import Service from '@/components/Service/service';
-import BlogPost from '@/components/BlogPost/blog-post';
-import FooterNav from '@/components/FooterNav/footer-nav';
-import SocialMedia from '@/components/SocialMedia/social-media';
-import Product from '@/components/Product/product';
-import Icon from '@/components/Icon/icon';
+import CtaForm from '@/components/Public/CtaForm/cta-form';
+import Service from '@/components/Public/Service/service';
+import BlogPost from '@/components/Public/BlogPost/blog-post';
+import FooterNav from '@/components/Public/FooterNav/footer-nav';
+import SocialMedia from '@/components/Public/SocialMedia/social-media';
+import Product from '@/components/Public/Product/product';
+import Icon from '@/components/Public/Icon/icon';
 import { IconEnum } from '@/types/icons';
 
 export default function Components() {

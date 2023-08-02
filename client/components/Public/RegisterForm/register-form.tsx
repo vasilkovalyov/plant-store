@@ -6,7 +6,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 
 import Button from '@mui/material/Button';
 
-import Icon from '@/components/Icon/icon';
+import Icon from '@/components/Public/Icon/icon';
 import { IconEnum } from '@/types/icons';
 
 export default function RegisterForm() {

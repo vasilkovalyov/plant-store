@@ -7,8 +7,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
 import { ISectionBlogPostsProps } from './section-blog-posts.type';
-import { IBlogPostProps } from '@/components/BlogPost/blog-post.type';
-import BlogPost from '@/components/BlogPost/blog-post';
+import { IBlogPostProps } from '@/components/Public/BlogPost/blog-post.type';
+import BlogPost from '@/components/Public/BlogPost/blog-post';
 
 export default function SectionBlogPost({
   title,

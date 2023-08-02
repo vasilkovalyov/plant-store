@@ -12,13 +12,13 @@ import Container from '@mui/material/Container';
 import Pagination from '@mui/material/Pagination';
 import Button from '@mui/material/Button';
 
-import Product from '@/components/Product/product';
+import Product from '@/components/Public/Product/product';
 import { IProduct } from '@/types/common';
-import FilterProducts from '@/components/FilterProducts/filter-products';
-import FilterButtons from '@/components/FilterButtons/filter-buttons';
-import { IFilterButtonType } from '@/components/FilterButtons/filter-buttons.type';
-import SortSelect from '@/components/SortSelect/sort-select';
-import { ISortSelectType } from '@/components/SortSelect/sort-select.type';
+import FilterProducts from '@/components/Public/FilterProducts/filter-products';
+import FilterButtons from '@/components/Public/FilterButtons/filter-buttons';
+import { IFilterButtonType } from '@/components/Public/FilterButtons/filter-buttons.type';
+import SortSelect from '@/components/Public/SortSelect/sort-select';
+import { ISortSelectType } from '@/components/Public/SortSelect/sort-select.type';
 
 const sortFields: ISortSelectType[] = [
   {
