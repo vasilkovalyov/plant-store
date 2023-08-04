@@ -1,5 +1,3 @@
-// import Image from 'next/image';
-
 import SectionHeroBanner from '@/sections/SectionHeroBanner/section-hero-banner';
 import SectionBlogPosts from '@/sections/SectionBlogPosts/section-blog-posts';
 

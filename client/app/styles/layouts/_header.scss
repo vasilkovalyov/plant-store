@@ -1,5 +1,6 @@
 @use '../base/setup';
 @use '../settings/spacing';
+@use '../settings/font-weights' as fw;
 @use '../settings/colors';
 @use '../tools/mixin';
 @use '../tools/responsive';
@@ -78,6 +79,8 @@
   }
 
   & &__button-login {
+    font-weight: fw.$normal;
+
     @media (min-width: setup.$header-nav-breakpoint-min) {
       margin-left: 14px;
     }
