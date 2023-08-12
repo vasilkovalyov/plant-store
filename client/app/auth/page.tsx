@@ -1,11 +1,11 @@
-import AuthForm from '@/components/Public/AuthForm/auth-form';
+import AuthForms from '@/components/Public/Auth/auth';
 import Container from '@mui/material/Container';
 
 export default function Auth() {
   return (
     <section className="section-auth">
       <Container>
-        <AuthForm />
+        <AuthForms />
       </Container>
     </section>
   );

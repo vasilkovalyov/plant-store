@@ -9,10 +9,10 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 
-import Icon from '../Icon/icon';
+import Icon from '../../components/Public/Icon/icon';
 import { IconEnum } from '@/types/icons';
-import NavigationMenu from '../NavigationMenu/navigation-menu';
-import { NavigationMenuItemType } from '../NavigationMenu/navigation-menu.type';
+import NavigationMenu from '../../components/Public/NavigationMenu/navigation-menu';
+import { NavigationMenuItemType } from '../../components/Public/NavigationMenu/navigation-menu.type';
 
 const menu: NavigationMenuItemType[] = [
   {

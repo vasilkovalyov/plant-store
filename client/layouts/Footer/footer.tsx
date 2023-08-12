@@ -1,9 +1,9 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-import ContactBanner from '../ContactBanner/contact-banner';
-import ServicesBanner from '../ServicesBanner/services-banner';
-import FooterBottom from '../FooterBottom/footer-bottom';
+import ContactBanner from '../../components/Public/ContactBanner/contact-banner';
+import ServicesBanner from '../../components/Public/ServicesBanner/services-banner';
+import FooterBottom from '../../components/Public/FooterBottom/footer-bottom';
 
 export default function Footer() {
   const year = new Date().getFullYear();

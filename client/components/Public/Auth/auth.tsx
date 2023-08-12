@@ -5,12 +5,12 @@ import cn from 'classnames';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
-import LoginForm from '../LoginForm/login-form';
-import RegisterForm from '../RegisterForm/register-form';
+import LoginForm from '../../AuthForms/LoginForm/login-form';
+import RegistrationForm from '../../AuthForms/RegistrationForm/registration-form';
 
 type FormType = 'login' | 'register';
 
-export default function AuthForm() {
+export default function Auth() {
   const [formVariant, setFormVariant] = useState<FormType>('login');
 
   function toggleForm(type: FormType) {
@@ -18,14 +18,15 @@ export default function AuthForm() {
   }
 
   return (
-    <Box className="auth-form">
-      <Box className="auth-form__toggle-box">
+    <Box className="auth">
+      <Box className="auth__toggle-box">
         <Button
           variant="text"
           size="small"
-          className={cn('auth-form__toggle-form-button', {
+          className={cn('auth__toggle-form-button', {
             active: formVariant === 'login',
           })}
+          color="inherit"
           onClick={() => toggleForm('login')}
         >
           Login
@@ -33,16 +34,30 @@ export default function AuthForm() {
         <Button
           variant="text"
           size="small"
-          className={cn('auth-form__toggle-form-button', {
+          className={cn('auth__toggle-form-button', {
             active: formVariant === 'register',
           })}
+          color="inherit"
           onClick={() => toggleForm('register')}
         >
-          Register
+          Registration
         </Button>
       </Box>
-      {formVariant === 'login' ? <LoginForm /> : null}
-      {formVariant === 'register' ? <RegisterForm /> : null}
+      {}
+      <Box
+        className={cn('auth__form-wrapper', {
+          active: formVariant === 'login',
+        })}
+      >
+        <LoginForm />
+      </Box>
+      <Box
+        className={cn('auth__form-wrapper', {
+          active: formVariant === 'register',
+        })}
+      >
+        <RegistrationForm />
+      </Box>
     </Box>
   );
 }

@@ -3,7 +3,7 @@
 @use '../settings/font-weights' as fw;
 @use '../settings/spacing';
 
-.auth-form {
+.auth {
   max-width: 400px;
   width: 100%;
   margin: 0 auto;
@@ -33,6 +33,14 @@
         height: 10px;
         background-color: setup.$base-text-color;
       }
+    }
+  }
+
+  & &__form-wrapper {
+    display: none;
+
+    &.active {
+      display: block;
     }
   }
 }

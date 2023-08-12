@@ -60,7 +60,6 @@ export default function SectionBlogPost({
       title: 'Top 10 Succulents for Your Home',
     },
   ]);
-  console.log(posts);
   return (
     <Box component="section" className="section-blog-posts">
       <Container>
