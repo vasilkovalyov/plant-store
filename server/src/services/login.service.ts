@@ -16,9 +16,7 @@ class AuthService {
     const validPass = await bcrypt.compare(Password, user.Password)
     if (!validPass) throw new Error('Wrong password')
 
-    const tokenService = new TokenService()
-
-    const token = await tokenService.generateTokens({
+    const token = await TokenService.generateTokens({
       UserId: user.UserId,
     })
 

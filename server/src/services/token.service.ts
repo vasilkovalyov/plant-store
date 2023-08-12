@@ -1,14 +1,8 @@
 import jwt from 'jsonwebtoken'
 import expiresAuth from '../constants/expiresAuth'
 
-export interface ITokenVerifyResponse {
-  UserId: string
-  iat: number
-  exp: number
-}
-
 class TokenService {
-  async generateTokens(
+  static async generateTokens(
     payload: { UserId: string },
     accessTokenTime: string = expiresAuth.expiresAccessToken,
     refreshTokenTime: string = expiresAuth.expiresRefreshToken
@@ -31,7 +25,7 @@ class TokenService {
     }
   }
 
-  async validateAccessToken(accessToken: string) {
+  static async validateAccessToken(accessToken: string) {
     const userData = await jwt.verify(
       accessToken,
       process.env.JWT_ACCESS_SECRET || ''

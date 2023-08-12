@@ -2,13 +2,14 @@ import express, { Request, Response } from 'express'
 
 import UserModel from '../model/user'
 import AuthController from '../controllers/auth.controller'
+import isAuth from '../middleware/isAuth'
 
 const router = express.Router()
 
 router.post('/registration-user', AuthController.baseRegistration)
 router.post('/login', AuthController.baseLogin)
 
-router.get('/delete-user', async (req: Request, res: Response) => {
+router.get('/delete-user', isAuth, async (req: Request, res: Response) => {
   try {
     const user = await UserModel.destroy({
       where: {
@@ -28,7 +29,7 @@ router.get('/delete-user', async (req: Request, res: Response) => {
   }
 })
 
-router.get('/users', async (req: Request, res: Response) => {
+router.get('/users', isAuth, async (req: Request, res: Response) => {
   try {
     const users = await UserModel.findAll()
     return res.status(200).json(users)
